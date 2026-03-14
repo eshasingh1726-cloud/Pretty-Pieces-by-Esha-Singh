@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Pretty Pieces by Esha Singh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css" />
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="index.html"><img src="Profile/p.png" alt="Logo" class="nav-logo" /></a>
+      <div class="nav-name-group">
+        <span class="nav-name">Pretty Pieces <em>by Esha Singh</em></span>
+        <span class="nav-tagline">Wander through the road of art and graphics.</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="work.html" class="nav-link">Work</a>
+      <a href="contact.html" class="nav-link nav-link--cta active">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE INTRO -->
+  <section class="page-intro">
+    <span class="label">Let's Connect</span>
+    <h1>Get In <em>Touch</em></h1>
+    <p>Have a project in mind? I'd love to hear from you.</p>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <span class="label">Services I Offer</span>
+    <div class="services__grid">
+      <!-- Replace the text inside each card with your service names -->
+      <div class="service-card">
+        <span class="service-card__num">01</span>
+        <p class="service-card__name">Website Design & Development</p>
+        <p class="service-card__examples">(Examples: Magical Mantras – Yaga Website, PeakFitt – Fitness Guide & Tracker, Ikigai World – Travel & Tourism Website)</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__num">02</span>
+        <p class="service-card__name">Branding & Identity Design</p>
+        <p class="service-card__examples">(Examples: Logos, Mascots, Google Doodles)</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__num">03</span>
+        <p class="service-card__name">Illustration & Digital Art</p>
+        <p class="service-card__examples">(Examples: Mandala Art, Tessellations, Sketches, Digital Art, Patterns, Scarf Design)</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__num">04</span>
+        <p class="service-card__name">Product & Merchandise Design</p>
+        <p class="service-card__examples">(Examples: Bag Design, Mug Design, Notebook Design, Calendar Pages, Sticker Designs)</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__num">05</span>
+        <p class="service-card__name">Marketing & Social Media Design</p>
+        <p class="service-card__examples">(Examples: Social Media Content, Banners, Posters, Cards, Certificates, Quotes & Phrases</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__num">06</span>
+        <p class="service-card__name">Motion & Video</p>
+        <p class="service-card__examples">(Examples: Motion Graphics, Video Projects)</p>
+      </div>
+      <div class="service-card">
+        <span class="service-card__num">07</span>
+        <p class="service-card__name">AI-Assisted Creative Projects</p>
+        <p class="service-card__examples">(Examples: AI Image Projects, AI Video Experiments& vibe coding apps)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact-section">
+    <div class="contact-section__inner">
+
+      <div class="contact-info">
+        <span class="label">Reach Out</span>
+        <h2>Send Me a <em>Message</em></h2>
+        <p class="contact-info__note">I typically respond within 24–48 hours.</p>
+        <div class="contact-info__links">
+          <a href="mailto:eshas1701@gmail.com" class="contact-link">
+            <span class="contact-link__icon">✉</span>
+            eshas1701@gmail.com
+          </a>
+          <a href="https://github.com/EshaSingh17" target="_blank" class="contact-link">
+            <span class="contact-link__icon">⌥</span>
+            github.com/EshaSingh17
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--submit" id="submitBtn">
+          Send Message
+        </button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer"></footer>
+  <script src="script.js"></script>
+  <script src="email.js"></script>
+</body>
+</html>

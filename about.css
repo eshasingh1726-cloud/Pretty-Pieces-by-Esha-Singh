@@ -1,0 +1,212 @@
+/* ============================================================
+   ABOUT PAGE — Simple & Clean
+   ============================================================ */
+:root {
+  --white:        #ffffff;
+  --blush:        #f9c6d0;
+  --blush-light:  #fdf0f3;
+  --blush-mid:    #e8899a;
+  --black:        #111111;
+  --grey:         #666666;
+  --nav-h:        80px;
+  --transition:   0.4s cubic-bezier(0.4,0,0.2,1);
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'Raleway', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--white); color: var(--black); overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+/* NAVBAR */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: var(--nav-h);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 56px;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #f0e4e8;
+  transition: box-shadow var(--transition);
+}
+.navbar.scrolled { box-shadow: 0 4px 32px rgba(232,137,154,0.12); }
+.nav-left { display: flex; align-items: center; gap: 14px; }
+.nav-logo { width: 52px; height: 52px; object-fit: cover; border-radius: 50%; }
+.nav-name-group { display: flex; flex-direction: column; gap: 1px; }
+.nav-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; }
+.nav-name em { font-weight: 400; font-style: italic; }
+.nav-tagline { font-size: 0.68rem; font-weight: 400; color: var(--blush-mid); letter-spacing: 0.1em; text-transform: uppercase; }
+.nav-right { display: flex; align-items: center; gap: 40px; }
+.nav-link { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; position: relative; padding-bottom: 4px; transition: color var(--transition); }
+.nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1.5px; background: var(--blush-mid); transition: width var(--transition); }
+.nav-link:hover, .nav-link.active { color: var(--blush-mid); }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+.nav-link--cta { padding: 9px 26px; border: 1.5px solid var(--black); border-radius: 100px; }
+.nav-link--cta::after { display: none; }
+.nav-link--cta:hover { background: var(--black); color: var(--white); }
+
+/* SHARED LABEL */
+.label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blush-mid);
+  margin-bottom: 14px;
+}
+
+/* INTRO */
+.intro {
+  padding: calc(var(--nav-h) + 72px) 56px 72px;
+  max-width: 680px;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.1s forwards;
+}
+.intro h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.intro h1 em { font-style: italic; font-weight: 400; color: var(--blush-mid); }
+.intro__bio {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--grey);
+}
+
+/* SKILLS */
+.skills {
+  background: var(--blush-light);
+  padding: 72px 56px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  border-top: 1px solid var(--blush);
+  border-bottom: 1px solid var(--blush);
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tags span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid var(--blush);
+  padding: 6px 14px;
+  border-radius: 100px;
+  transition: all var(--transition);
+}
+.tags span:hover {
+  background: var(--blush-mid);
+  color: var(--white);
+  border-color: var(--blush-mid);
+}
+
+/* EXPERIENCE */
+.experience {
+  padding: 72px 56px;
+  max-width: 780px;
+}
+.exp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.exp-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid #f0e4e8;
+  gap: 24px;
+}
+.exp-list li:last-child { border-bottom: none; }
+.exp-role {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black);
+}
+.exp-org {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--grey);
+  white-space: nowrap;
+}
+
+/* Alternating section bg */
+.experience.alt {
+  background: var(--blush-light);
+  border-top: 1px solid var(--blush);
+  border-bottom: 1px solid var(--blush);
+}
+.cta {
+  background: var(--black);
+  padding: 80px 56px;
+  text-align: center;
+}
+.cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--white);
+  margin-bottom: 36px;
+}
+.cta__btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 100px;
+  border: 1.5px solid transparent;
+  transition: all var(--transition);
+}
+.btn--dark { background: var(--white); color: var(--black); border-color: var(--white); }
+.btn--dark:hover { background: transparent; color: var(--white); }
+.btn--outline { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.4); }
+.btn--outline:hover { border-color: var(--white); }
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 28px 56px;
+  font-size: 0.75rem;
+  color: var(--grey);
+  letter-spacing: 0.08em;
+  border-top: 1px solid #f0e4e8;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .skills { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .navbar { padding: 0 24px; }
+  .nav-tagline { display: none; }
+  .intro { padding: calc(var(--nav-h) + 48px) 24px 48px; }
+  .skills { grid-template-columns: 1fr; padding: 48px 24px; }
+  .experience { padding: 48px 24px; }
+  .cta { padding: 60px 24px; }
+  .exp-list li { flex-direction: column; gap: 4px; }
+  .exp-org { white-space: normal; }
+}

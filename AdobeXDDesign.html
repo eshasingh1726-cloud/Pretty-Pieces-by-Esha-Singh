@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adobe XD Design — Pretty Pieces by Esha Singh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="AdobeXDDesign.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="index.html"><img src="Profile/p.png" alt="Logo" class="nav-logo" /></a>
+      <div class="nav-name-group">
+        <span class="nav-name">Pretty Pieces <em>by Esha Singh</em></span>
+        <span class="nav-tagline">Wander through the road of art and graphics.</span>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="work.html" class="nav-link active">Work</a>
+      <a href="contact.html" class="nav-link nav-link--cta">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE INTRO -->
+  <section class="page-intro">
+    <a href="../work.html" class="back-link">&#8592; Back to Work</a>
+    <span class="label">Adobe XD Design</span>
+    <h1>UI <em>Designs</em></h1>
+    <p>Prototypes and UI layouts designed in Adobe XD.</p>
+  </section>
+
+  <!-- PROJECT SECTION -->
+  <section class="project-section">
+    <div class="project-section__inner">
+
+      <div class="project-header">
+        <div class="project-header__text">
+          <span class="label">Project</span>
+          <h2>Adobe XD <em>Work</em></h2>
+          <p class="project-sub">UI Design &amp; Prototyping</p>
+        </div>
+        <div class="project-tags">
+          <span>Adobe XD</span><span>UI Design</span><span>Prototyping</span>
+        </div>
+      </div>
+
+      <!-- GRID -->
+      <div class="image-grid">
+        <!-- Replace src with your actual image paths -->
+        <div class="image-grid__item">
+          <img src="Assets/Adobe XD Designs/Artboard – 1.png" alt="Adobe XD Design 1" />
+        </div>
+        <div class="image-grid__item">
+          <img src="Assets/Adobe XD Designs/Artboard – 2.png" alt="Adobe XD Design 2" />
+        </div>
+        <div class="image-grid__item">
+          <img src="Assets/Adobe XD Designs/Chat.png" alt="Adobe XD Design 3" />
+        </div>
+        <div class="image-grid__item">
+          <img src="Assets/Adobe XD Designs/My project (1)_edited.jpg" alt="Adobe XD Design 4" />
+        </div>
+        <div class="image-grid__item image-grid__item--wide">
+          <img src="Assets/Adobe XD Designs/Web 1920 – 1.png" alt="Adobe XD Design 5" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+    <button class="lightbox__btn lightbox__btn--next" onclick="event.stopPropagation(); lightboxNext()">&#8594;</button>
+    <span class="lightbox__counter" id="lightbox-counter">1 / 5</span>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Interested in working together?</h2>
+    <a href="../contact.html" class="btn">Get In Touch</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer"></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
