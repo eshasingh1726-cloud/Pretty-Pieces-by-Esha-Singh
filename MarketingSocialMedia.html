@@ -593,9 +593,11 @@
 
     function initCarousel(id) {
       const carousel = document.getElementById(id);
+      if (!carousel) return; // skip if element doesn't exist
       const slides = carousel.querySelectorAll('.carousel__slide');
       const dotsContainer = document.getElementById('dots-' + id);
       const total = slides.length;
+      if (total === 0) return; // skip if no slides
       carouselState[id] = { current: 0, total };
 
       slides.forEach((_, i) => {
@@ -655,8 +657,8 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      ['banner','cards','canva','certificates',
-       'ig-1','ig-2','ig-3','ig-4','ig-5','ig-6','ig-7','ig-8','ig-9',
+      ['banner','cards', 'cards-2','canva','certificates',
+       'ig-all', 'ig-1','ig-2','ig-3','ig-4','ig-5','ig-6','ig-7','ig-8','ig-9',
        'quotes','poster'
       ].forEach(id => initCarousel('carousel-' + id));
     });
